@@ -54,11 +54,11 @@
   overflow: hidden;
 }
 input {
-  width: 150px;
+  width: 250px;
   background: transparent;
   border: 0;
   outline: 0;
-  padding: 18px 15px;
+  padding: 18px 5px;
 }
 .input-field i {
   margin-left: 15px;

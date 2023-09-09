@@ -26,14 +26,23 @@
 
             <div class="input-field">
               <i class="fa-solid fa-envelope"></i>
-              <input type="email" placeholder="Email" required />
-              <div class="error"></div>
+              <input
+                type="email"
+                placeholder="Email"
+                id="contact-email"
+                onkeyup="emailValidation()"
+              />
+              <span class="email-error">Error</span>
             </div>
 
             <div class="input-field">
               <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="Password" required />
-              <div class="error"></div>
+              <input
+                type="password"
+                placeholder="Password"
+                id="contact-password"
+              />
+              <span class="password-error"></span>
             </div>
 
             <p>Lost password <a href="#">Click Here!</a></p>
