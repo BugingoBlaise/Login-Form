@@ -100,4 +100,5 @@ form button {
 }
 .input-group label {
   flex-basis: 28%;
+  padding-left: 4px;
 }

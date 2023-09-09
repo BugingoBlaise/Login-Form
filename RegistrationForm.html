@@ -96,17 +96,27 @@
           <input type="radio" id="male" name="gender" value="male" required />
           <label for="male">Male</label><br /><br />
         </div>
-
-        <!-- <div class="input-group">
-          <label>Your Message</label>
-          <textarea
-            rows="5"
-            placeholder="Enter your message"
-            id="contact-message"
-            onkeyup="validateMessage()"
-          ></textarea>
-          <span id="message-error"></span>
-        </div> -->
+ <div class="input-group">
+  <label>Faculty: </label>
+  <select>
+            <option value="0">Select Faculty:</option>
+            <option value="1">Information Technology</option>
+            <option value="2">Business Administration</option>
+            <option value="3">Theology </option>
+            <option value="4">Education</option>
+            <option value="5">Nursing</option>
+  </select>
+ </div>
+  <div class="input-group">
+  <label>Department: </label>
+  <select>
+            <option value="0">Select Department:</option>
+            <option value="1">Software Engineering</option>
+            <option value="2">Networks and Telecommunications</option>
+            <option value="3">Information Management</option>
+  </select>
+ </div>
+        
 
         <button>Submit</button>
         <span id="submit-error"></span>
