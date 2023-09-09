@@ -16,10 +16,20 @@
         <i class="fas fa-paper-plane"></i>
 
         <div class="input-group">
-          <label>Full Name</label>
+          <label>First Name</label>
           <input
             type="text"
-            placeholder="Enter your name"
+            placeholder="Enter your first name"
+            id="contact-name"
+            onkeyup="validateName()"
+          />
+          <span id="name-error"></span>
+        </div>
+        <div class="input-group">
+          <label>Last Name</label>
+          <input
+            type="text"
+            placeholder="Enter your last name"
             id="contact-name"
             onkeyup="validateName()"
           />
@@ -38,7 +48,7 @@
         </div>
 
         <div class="input-group">
-          <label>Email Id</label>
+          <label>Email</label>
           <input
             type="email"
             placeholder="Enter Email"
@@ -49,21 +59,45 @@
         </div>
         <div class="input-group">
           <label>Age:</label>
-          <input
-            type="text"
-            placeholder="Enter Age"
-            id="contact-age"
-            onkeyup="validateEmail()"
-          />
+          <select>
+            <option value="0">Select year:</option>
+            <option value="18">1994</option>
+            <option value="17">1995</option>
+            <option value="16">1996</option>
+            <option value="15">1997</option>
+            <option value="14">1998</option>
+            <option value="13">1999</option>
+            <option value="1">2001</option>
+            <option value="2">2002</option>
+            <option value="3">2003</option>
+            <option value="4">2004</option>
+            <option value="5">2005</option>
+            <option value="6">2006</option>
+            <option value="7">2007</option>
+            <option value="8">2008</option>
+            <option value="9">2009</option>
+            <option value="10">2010</option>
+            <option value="11">2011</option>
+            <option value="12">2012</option>
+          </select>
           <span id="age-error"></span>
         </div>
         <div class="input-group">
-          <label>Sex:</label>
-          <input type="radio" name="gender" value="male" /> Male
-          <input type="radio" name="gender" value="female" /> Female
+          <label>Gender:</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            required
+          />
+          <label for="female">Female</label>
+
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male">Male</label><br /><br />
         </div>
 
-        <div class="input-group">
+        <!-- <div class="input-group">
           <label>Your Message</label>
           <textarea
             rows="5"
@@ -72,18 +106,13 @@
             onkeyup="validateMessage()"
           ></textarea>
           <span id="message-error"></span>
-        </div>
+        </div> -->
 
         <button>Submit</button>
         <span id="submit-error"></span>
       </form>
 
-      <div class="useful-links">
-        <a href="https://youtu.be/fz8bwvn9lA4">Watch Video</a>
-        <a
-          href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1"
-          >Visit Channel</a
-        >
+     
       </div>
     </div>
   </body>
