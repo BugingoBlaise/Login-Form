@@ -125,3 +125,8 @@ function validateForm() {
     return false;
   }
 }
+//Redirecto to sign up page
+document.getElementById("signupBtnn").addEventListener("click", function () {
+  // Redirect to the second page
+  window.location.href = "RegistrationForm.html";
+});
