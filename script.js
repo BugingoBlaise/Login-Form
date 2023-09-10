@@ -130,3 +130,7 @@ document.getElementById("signupBtnn").addEventListener("click", function () {
   // Redirect to the second page
   window.location.href = "RegistrationForm.html";
 });
+document.getElementById("loginBtn").addEventListener("click", function () {
+  // Redirect to the second page
+  window.location.href = "welcome.html";
+});
