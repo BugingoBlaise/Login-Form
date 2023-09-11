@@ -111,6 +111,12 @@ select {
 a {
   text-decoration: none;
   color: black;
-  padding-top: 10px;
+  margin: 10px;
   margin-left: 200px;
+}
+form h1 {
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+  padding-bottom: 4px;
 }

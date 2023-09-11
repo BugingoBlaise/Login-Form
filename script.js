@@ -50,6 +50,7 @@ let phoneError = document.getElementById("phone-error");
 let emailError = document.getElementById("email-error");
 let messageError = document.getElementById("message-error");
 let submitError = document.getElementById("submit-error");
+let lnameError = document.getElementById("lname-error");
 //Name Validation
 function validateName() {
   var name = document.getElementById("contact-name").value;
@@ -57,11 +58,24 @@ function validateName() {
     nameError.innerHTML = "Name is required";
     return false;
   }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+  if (name.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
     nameError.innerHTML = "Write full name";
     return false;
   }
   nameError.innerHTML = '<i class="fa-regular fa-circle-check"></i>';
+  return true;
+}
+function validateLName() {
+  var name = document.getElementById("contact-lname").value;
+  if (name.length == 0) {
+    lnameError.innerHTML = "Name is required";
+    return false;
+  }
+  if (name.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
+    lnameError.innerHTML = "Write full name";
+    return false;
+  }
+  lnameError.innerHTML = '<i class="fa-regular fa-circle-check"></i>';
   return true;
 }
 //Phone number validation
@@ -134,3 +148,37 @@ document.getElementById("loginBtn").addEventListener("click", function () {
   // Redirect to the second page
   window.location.href = "welcome.html";
 });
+
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  const dropdown = document.getElementById("dropdown");
+  const dropdownError = document.getElementById("dropdownError");
+
+  if (dropdown.value === "") {
+    dropdownError.textContent = "Please select an option";
+    event.preventDefault(); // Prevent form submission
+  } else {
+    dropdownError.textContent = ""; // Clear error message
+  }
+});
+
+const username = document.getElementById("contact-email");
+
+function validateLogin() {
+  var email = document.getElementById("contact-email").value;
+  const emailError = document.getElementById("email-error");
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  //   /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+  //   /^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/
+
+  if (email.length == 0) {
+    emailError.innerHTML = "Email is required!";
+    return false;
+  }
+  if (!emailRegex.test(email)) {
+    emailError.innerHTML = "Invalid Email !";
+    return false;
+  }
+  emailError.innerHTML = '<i class="fa-regular fa-circle-check"></i>';
+  return true;
+}

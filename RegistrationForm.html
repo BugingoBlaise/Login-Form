@@ -12,7 +12,8 @@
   </head>
   <body>
     <div class="container">
-      <form>
+      <form id="myForm">
+        <h1>Registration Form</h1>
         <i class="fas fa-paper-plane"></i>
 
         <div class="input-group">
@@ -30,10 +31,10 @@
           <input
             type="text"
             placeholder="Enter your last name"
-            id="contact-name"
-            onkeyup="validateName()"
+            id="contact-lname"
+            onkeyup="validateLName()"
           />
-          <span id="name-error"></span>
+          <span id="lname-error"></span>
         </div>
 
         <div class="input-group">
@@ -47,8 +48,8 @@
           <span id="phone-error"></span>
         </div>
         <div class="input-group">
-          <label for="">Nationality</label>
-          <select class="form-select" id="country" name="country">
+          <label for="dropdown">Nationality</label>
+          <select class="form-select" id="dropdown" name="dropdown" required>
             <option>select country</option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Aland Islands</option>
@@ -307,6 +308,7 @@
             <option value="ZM">Zambia</option>
             <option value="ZW">Zimbabwe</option>
           </select>
+          <span id="dropdownError" style="color: red"></span><br />
         </div>
 
         <div class="input-group">
@@ -322,7 +324,7 @@
 
         <div class="input-group">
           <label>Age:</label>
-          <select>
+          <select required>
             <option value="0">Select year:</option>
             <option value="18">1994</option>
             <option value="17">1995</option>
@@ -361,7 +363,7 @@
         </div>
         <div class="input-group">
           <label>Faculty: </label>
-          <select>
+          <select required>
             <option value="0">Select Faculty:</option>
             <option value="1">Information Technology</option>
             <option value="2">Business Administration</option>
@@ -377,6 +379,20 @@
             <option value="1">Software Engineering</option>
             <option value="2">Networks and Telecommunications</option>
             <option value="3">Information Management</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Semester: </label>
+          <select required>
+            <option value="0">Select Semester:</option>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
+            <option value="7">Semester 7</option>
+            <option value="8">Semester 8</option>
           </select>
         </div>
 
