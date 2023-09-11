@@ -103,3 +103,14 @@ form button {
   padding-left: 4px;
 }
 
+select {
+  width: 150px;
+  outline: none;
+  padding: 4px 7px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+  margin-left: 200px;
+}
