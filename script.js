@@ -1,3 +1,4 @@
+"use strict";
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
@@ -140,10 +141,43 @@ function validateForm() {
   }
 }
 //Redirecto to sign up page
-document.getElementById("signupBtnn").addEventListener("click", function () {
-  // Redirect to the second page
-  window.location.href = "RegistrationForm.html";
-});
+
+///loginn page validation
+function checkValidation() {
+  const contactEmail = document.getElementById("mail").value;
+  const contactPassword = document.getElementById("contact-password").value;
+  const emailError = document.querySelector(".email-error");
+  const passwordError = document.querySelector(".password-error");
+
+  // Reset error messages
+  emailError.textContent = "";
+  passwordError.textContent = "";
+
+  // Validate email
+  if (contactEmail.trim() === "") {
+    emailError.textContent = "Please insert your email";
+    return false;
+  } else if (!isValidEmail(contactEmail)) {
+    emailError.textContent = "Please enter a valid email address";
+    return false;
+  }
+
+  // Validate password
+  if (contactPassword.trim() === "") {
+    passwordError.textContent = "Please insert your password";
+    return false;
+  }
+
+  // If both email and password are valid, redirect to the second page
+  window.location.href = "welcome.html";
+}
+
+function isValidEmail(email) {
+  // Regular expression to check if the email is in a valid format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
 document.getElementById("loginBtn").addEventListener("click", function () {
   // Redirect to the second page
   window.location.href = "welcome.html";
@@ -162,8 +196,8 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 });
 
 const username = document.getElementById("contact-email");
-
-function validateLogin() {
+/*
+function validateEmail() {
   var email = document.getElementById("contact-email").value;
   const emailError = document.getElementById("email-error");
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -181,4 +215,12 @@ function validateLogin() {
   }
   emailError.innerHTML = '<i class="fa-regular fa-circle-check"></i>';
   return true;
+}
+*/
+
+function regForm() {
+  document.getElementById("signupBtnn").addEventListener("click", function () {
+    // Redirect to the second page
+    window.location.href = "RegistrationForm.html";
+  });
 }

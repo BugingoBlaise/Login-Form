@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script defer src="script.js"></script>
+    <script defer src="scripts.js"></script>
   </head>
   <body>
     <div class="container">
@@ -29,10 +29,10 @@
               <input
                 type="email"
                 placeholder="Email"
-                id="contact-email"
-                onkeyup="emailValidation()"
+                id="mail"
+                onkeyup="validateEmail()"
               />
-              <span class="email-error"></span>
+              <span style="color: red" class="email-error"></span>
             </div>
 
             <div class="input-field">
@@ -41,18 +41,23 @@
                 type="password"
                 placeholder="Password"
                 id="contact-password"
+                onkeyup=""
               />
-              <span class="password-error"></span>
+              <span style="color: red" class="password-error"></span>
             </div>
 
             <p>Lost password <a href="reset.html">Click Here!</a></p>
             <div class="login">
-              <button type="button" id="loginBtn">Login</button>
+              <button type="button" id="loginBtn" onclick="checkValidation()">
+                Login
+              </button>
             </div>
           </div>
 
           <div class="btn-field">
-            <button type="button" id="signupBtnn">Create Account</button>
+            <button type="button" id="signupBtnn" onclick="regForm()">
+              Create Account
+            </button>
 
             <!-- <button type="button" id="signinBtn" class="disable">
               Sign In
