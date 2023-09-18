@@ -58,3 +58,5 @@ function regForm() {
   // Redirect to the registration form page
   window.location.href = "RegistrationForm.html";
 }
+
+// Hello !!
